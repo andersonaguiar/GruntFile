@@ -10,8 +10,8 @@ My base files to run [Grunt](http://gruntjs.com/) in projects
 	git clone git://github.com/andersonaguiar/GruntFile
 	cd andersonaguiar/GruntFile
 	npm install
-	grunt w
+	grunt
 	```
 
-1. Start hacking away by modifying the `dev` directory
+1. Start hacking away by modifying the `app` directory
 
