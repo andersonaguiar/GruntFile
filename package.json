@@ -29,6 +29,7 @@
     "grunt-exec": "~0.4.2",
     "grunt-ftp-deploy": "0.0.9",
     "grunt-open": "~0.2.1",
+    "grunt-pagespeed": "^0.2.0",
     "load-grunt-config": "^0.10.0",
     "matchdep": "~0.1.2",
     "time-grunt": "^0.3.2"
