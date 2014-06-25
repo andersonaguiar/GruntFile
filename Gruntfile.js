@@ -84,24 +84,16 @@ module.exports = function(grunt) {
 
 
 		// uglify JS
-		// uglify: {
-		// 	options: {
-		// 		mangle: false,
-		// 	},
-		// 	dist: {
-		// 		files: {
-		// 			'<%= config.paths.env.dev %><%= config.paths.assets %><%= config.paths.js %>scripts.min.js': scripts // stay here, because the copy of dist
-		// 		}
-		// 	},
-		// 	dev: {
-		// 		options: {
-		// 			beautify: true
-		// 		},
-		// 		files: {
-		// 			'<%= config.paths.env.dev %><%= config.paths.assets %><%= config.paths.js %>scripts.min.js': scripts
-		// 		}
-		// 	}
-		// },
+		uglify: {
+			options: {
+				mangle: false,
+			},
+			dist: {
+				files: {
+					'<%= config.paths.env.dist %><%= config.paths.assets %><%= config.paths.js %>scripts.min.js': '<%= config.paths.env.dev %><%= config.paths.assets %><%= config.paths.js %>**/*' // stay here, because the copy of dist
+				}
+			}
+		},
 
 		// minify images
 		imagemin: {
@@ -153,7 +145,7 @@ module.exports = function(grunt) {
 
 		// exec commands
 		exec: {
-		    cmd: 'npm install && bower install && grunt'
+		    cmd: 'npm install && bower install && grunt dev'
 		},
 
 		// FTP deployment
@@ -283,7 +275,7 @@ module.exports = function(grunt) {
 
 
 	// watch
-	grunt.registerTask('default', ['browserSync', 'watch']);
+	grunt.registerTask('dev', ['browserSync', 'watch']);
 
 	// build
 	grunt.registerTask('dist', ['clean', 'uglify:dist', 'copy:dist', 'concat:js', /*'concat:css',*/ 'compass:dist', 'jshint', 'imagemin:dist', 'htmlmin:dist'/*, 'zip'*/]);
