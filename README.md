@@ -1,8 +1,14 @@
+![Grunt Logo](grunt-logo.png "Grunt")
+
+
+
+
+
 #GruntFile Boilerplate
 
 My base files to run [Grunt](http://gruntjs.com/) in projects
 
-## Getting Started
+##Getting Started
 
 1. Clone the project and run the [NPM](https://npmjs.org/)
 
@@ -15,3 +21,7 @@ My base files to run [Grunt](http://gruntjs.com/) in projects
 
 2. Start hacking away by modifying the `app` directory
 
+
+##Dependencies
+	
+For run autoshot is necessary the PhantonJS installed, more info: <http://phantomjs.org/>
