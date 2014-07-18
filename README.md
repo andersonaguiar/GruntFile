@@ -1,3 +1,9 @@
+![Grunt Logo](grunt-logo.png "Grunt")
+
+
+
+
+
 #GruntFile Boilerplate
 
 My base files to run [Grunt](http://gruntjs.com/) in projects
